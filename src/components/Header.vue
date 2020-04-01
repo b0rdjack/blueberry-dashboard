@@ -7,10 +7,14 @@
           <b-nav-item-dropdown right>
             <!-- Using 'button-content' slot -->
             <template v-slot:button-content>
-              <em>User</em>
+              <font-awesome-icon :icon="['fas', 'user']" class="icon alt" />
             </template>
-            <b-dropdown-item href="#">Profile</b-dropdown-item>
-            <b-dropdown-item href="#">Sign Out</b-dropdown-item>
+            <b-dropdown-item href="#">
+              <font-awesome-icon :icon="['fas', 'user-cog']" class="icon alt" />Mon profil
+            </b-dropdown-item>
+            <b-dropdown-item href="#">
+              <font-awesome-icon :icon="['fas', 'sign-out-alt']" class="icon alt" />Déconnexion
+            </b-dropdown-item>
           </b-nav-item-dropdown>
         </b-navbar-nav>
       </b-collapse>
