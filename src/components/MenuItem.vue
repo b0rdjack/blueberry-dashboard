@@ -1,16 +1,19 @@
 <template>
-  <b-row>
+  <b-row class="menuitem-block">
     <b-col>
       <b-row>
-        <b-col class="pt-4">
+        <b-col class="pt-4 menuitem-title">
           <h3>{{ title }}</h3>
         </b-col>
       </b-row>
       <b-row>
         <b-col>
-          <ul class="nav flex-column">
+          <ul class="nav flex-column menuitem-list">
             <li class="nav-item" v-for="(link, index) in links" :key="index">
-              <a class="nav-link" :href=link.url>{{link.title}}</a>
+              <a class="nav-link" :href="link.url">
+                  <font-awesome-icon :icon="['fas', 'exclamation-triangle']" class="icon alt"/>
+                {{link.title}}
+              </a>
             </li>
           </ul>
         </b-col>
@@ -21,8 +24,8 @@
 <script>
 export default {
   props: {
-    title: '',
+    title: "",
     links: []
   }
-}
+};
 </script>

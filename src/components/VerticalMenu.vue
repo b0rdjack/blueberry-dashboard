@@ -3,7 +3,7 @@
     <b-row class="title-section">
       <b-col class="text-center pt-4 pb-4">
         <h1>
-          Titre - Logo
+          Blueberry
         </h1>
       </b-col>
     </b-row>
@@ -18,19 +18,11 @@ export default {
   },
   data() {
     return {
-      title: 'Menu',
+      title: 'MAIN',
       links: [
         {
           url: "https://google.com",
-          title: "Google"
-        },
-        {
-          url: "https://facebook.com",
-          title: "Facebook"
-        },
-        {
-          url: "https://twitter.fr",
-          title: "Twitter"
+          title: "Signalement"
         }
       ]
     }
