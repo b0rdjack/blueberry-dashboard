@@ -1,0 +1,59 @@
+#reports_view
+  padding-left: 3em
+  .header
+    .col
+      .title
+        font-size: 2.5em
+        color: $dark
+      .last-update
+        padding-left: 1.5em
+        color: $blue
+        font-style: italic
+  .row
+    .col-1
+      .total
+        background-color: #FFF;
+        box-shadow: 0px 7px 7px $light_blue;
+        border-radius: 30px;
+        padding: 0.5em
+        text-align: center
+        span
+          font-size: 0.95em
+          color: $light_dark
+  .data
+    .col
+      .table-responsive
+        border-radius: 15px;
+        box-shadow: 0px 5px 5px $light_blue;
+        .table
+          thead
+            background-color: $red
+            tr
+              th
+                color: $light
+          tbody
+            tr
+              td
+                overflow: hidden;
+              .row
+                font-weight: normal
+              .column-action
+                padding-right: 0
+                .actions
+                  margin: 0
+                  .col-8
+                    padding: 0
+                    .btn
+                      border-radius: 50%;
+                      background-color: $gray
+                      border-color: $gray
+                    .approve
+                      margin-right: 0.5em
+                      background-color: $light_blue
+                      &:hover
+                        background-color: $blue
+                    .delete
+                      background-color: $light_red;
+                      &:hover
+                        background-color: $red
+

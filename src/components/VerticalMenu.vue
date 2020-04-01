@@ -7,6 +7,7 @@
         </h1>
       </b-col>
     </b-row>
+    <!-- Main menu  -->
     <MenuItem :title="title" :links="links" />
   </b-col>
 </template>
@@ -21,7 +22,7 @@ export default {
       title: 'MAIN',
       links: [
         {
-          url: "https://google.com",
+          url: "/reports",
           title: "Signalement"
         }
       ]

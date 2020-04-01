@@ -11,7 +11,7 @@
           <ul class="nav flex-column menuitem-list">
             <li class="nav-item" v-for="(link, index) in links" :key="index">
               <a class="nav-link" :href="link.url">
-                  <font-awesome-icon :icon="['fas', 'exclamation-triangle']" class="icon alt"/>
+                <font-awesome-icon :icon="['fas', 'exclamation-triangle']" class="icon alt" />
                 {{link.title}}
               </a>
             </li>
@@ -25,7 +25,15 @@
 export default {
   props: {
     title: "",
-    links: []
+    links: {
+      type: Array,
+      default: () => [
+        {
+          url: "",
+          title: ""
+        }
+      ]
+    }
   }
 };
 </script>
