@@ -10,10 +10,10 @@
         <b-col>
           <ul class="nav flex-column menuitem-list">
             <li class="nav-item" v-for="(link, index) in links" :key="index">
-              <a class="nav-link" :href="link.url">
+              <router-link :to="'reports'" class="nav-link">
                 <font-awesome-icon :icon="['fas', 'exclamation-triangle']" class="icon alt" />
                 {{link.title}}
-              </a>
+              </router-link>
             </li>
           </ul>
         </b-col>

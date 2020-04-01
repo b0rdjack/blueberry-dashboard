@@ -19,7 +19,7 @@ export default {
   },
   data() {
     return {
-      title: 'MAIN',
+      title: 'Main',
       links: [
         {
           url: "/reports",
