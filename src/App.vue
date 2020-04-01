@@ -1,31 +1,28 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link>
-    </div>
-    <router-view/>
+    <b-container fluid class="d-flex flex-column">
+      <b-row class="h-100">
+        <VerticalMenu />
+        <b-col cols="10" id="main">
+          <b-row>
+            <Header />
+          </b-row>
+          <b-row>
+            <router-view />
+          </b-row>
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+<script>
+import Header from "@/components/Header.vue";
+import VerticalMenu from "@/components/VerticalMenu.vue";
+export default {
+  components: {
+    Header,
+    VerticalMenu
   }
-}
-</style>
+};
+</script>
