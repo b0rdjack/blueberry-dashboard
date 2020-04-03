@@ -1,0 +1,41 @@
+#reportstab_block
+  .table
+    box-shadow: 0px 5px 5px $light_blue;
+    border-radius: 15px;
+    .thead-block
+      background-color: $red
+      tr
+        th
+          color: $light
+    tbody
+      tr
+        td
+          overflow: hidden;
+        .column-ids
+          font-weight: bold
+          .row
+            font-weight: normal
+        .column-actions
+          width: 10%
+          .actions
+            margin: 0
+            .col
+              padding: 0
+              .btn
+                border-radius: 50%;
+                background-color: $gray
+                border-color: $gray
+            .approve
+              .btn
+                background-color: $light_blue
+                &:hover
+                  background-color: $blue
+            .delete
+              .btn
+                background-color: $light_red;
+                &:hover
+                  background-color: $red
+            .details
+              .btn
+                &:hover
+                  background-color: $light_black

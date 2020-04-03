@@ -20,6 +20,7 @@ library.add(faUserCog)
 library.add(faSignOutAlt)
 library.add(faTrashAlt)
 library.add(faCheckCircle)
+library.add(faEye)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.config.productionTip = false
 
