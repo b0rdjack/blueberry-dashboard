@@ -1,7 +1,7 @@
 <template>
   <b-col id="reportstab_block">
     <b-table :items="reports" :fields="fields" thead-class="thead-block">
-      <template v-slot:cell(actions)>
+      <template v-slot:cell(actions)="item">
         <b-row class="actions">
           <b-col class="approve">
             <b-button title="accept" size="sm">
@@ -9,9 +9,14 @@
             </b-button>
           </b-col>
           <b-col class="details">
-            <b-button title="see" size="sm">
+            <router-link
+            type="button"
+              tag="button"
+              :to="{name: 'report', params: { id: item.item.id }}"
+              class="btn btn-secondary btn-sm"
+            >
               <font-awesome-icon :icon="['fas', 'eye']" />
-            </b-button>
+            </router-link>
           </b-col>
           <b-col class="delete">
             <b-button title="refuse" size="sm">
