@@ -10,7 +10,7 @@
           </b-col>
           <b-col class="details">
             <router-link
-            type="button"
+              type="button"
               tag="button"
               :to="{name: 'report', params: { id: item.item.id }}"
               class="btn btn-secondary btn-sm"
@@ -54,6 +54,11 @@ export default {
           actions: ""
         }
       ]
+    }
+  },
+  data() {
+    return {
+      report: ""
     }
   }
 };

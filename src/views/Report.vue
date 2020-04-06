@@ -1,10 +1,47 @@
 <template>
-  <div>
-    <p>Hello World</p>
-  </div>
+  <b-col id="report_view">
+    <b-row class="header">
+      <b-col>
+        <span class="title">Détails du signalement #{{report.id}}</span>
+      </b-col>
+    </b-row>
+    <b-row class="mt-3">
+      <b-col>
+        <b-row>
+          <b-col>
+            <b-card title="Historique des conversations" class="history-conversation">
+              <b-row>
+                <b-col>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pulvinar venenatis nulla.</p>
+                  <p>Fusce vestibulum pellentesque porta. Nunc iaculis fringilla justo quis egestas. Proin interdum consectetur lacus quis porttitor.</p>
+                  <p>Phasellus nisl neque, sodales a fermentum at, pellentesque id lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                </b-col>
+              </b-row>
+            </b-card>
+          </b-col>
+          <b-col>
+            <UserReport :user="report.by" mode="effectué" sub="Signale" user_id="05" />
+            <br />
+            <UserReport :user="report.accused" mode="reçu" sub="Signalé" user_id="10" />
+            <br />
+          </b-col>
+        </b-row>
+      </b-col>
+    </b-row>
+  </b-col>
 </template>
 <script>
+import { mapGetters } from "vuex";
+import UserReport from "@/components/UserReport.vue";
 export default {
-
-}
+  components: {
+    UserReport
+  },
+  computed: {
+    ...mapGetters(["getReportById"]),
+    report() {
+      return this.getReportById(this.$route.params.id);
+    }
+  }
+};
 </script>
