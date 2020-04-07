@@ -5,9 +5,9 @@
         <b-col cols="11">
           <span>Utilisateur #{{user_id}}</span>
         </b-col>
-        <b-col cols="1">
+        <b-col>
           <font-awesome-icon v-if="state.show" :icon="['fas', 'chevron-up']" class="chevron-up" />
-          <font-awesome-icon v-else :icon="['fas', 'chevron-down']" class="chevron-down"  />
+          <font-awesome-icon v-else :icon="['fas', 'chevron-down']" class="chevron-down" />
         </b-col>
       </b-row>
     </b-card-title>
@@ -56,11 +56,9 @@
               <b-row class="history-list">
                 <b-col>
                   <b-list-group>
-                    <b-list-group-item button>Signalement #54: 20/12/2019</b-list-group-item>
-                    <b-list-group-item button>Signalement #42: 12/09/2019</b-list-group-item>
-                    <b-list-group-item button>Signalement #31: 10/08/2019</b-list-group-item>
-                    <b-list-group-item button>Signalement #28: 08/04/2019</b-list-group-item>
-                    <b-list-group-item button>Signalement #15: 06/02/2019</b-list-group-item>
+                    <HistoryReportItem report_id="82" created_at="20/12/2019" />
+                    <HistoryReportItem report_id="64" created_at="14/11/2019" />
+                    <HistoryReportItem report_id="21" created_at="12/09/2019" />
                   </b-list-group>
                 </b-col>
               </b-row>
@@ -72,7 +70,11 @@
   </b-card>
 </template>
 <script>
+import HistoryReportItem from "@/components/HistoryReportItem.vue";
 export default {
+  components: {
+    HistoryReportItem
+  },
   data() {
     return {
       state: {
