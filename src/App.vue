@@ -2,10 +2,10 @@
   <div id="app">
     <b-container fluid class="d-flex flex-column">
       <b-row class="h-100">
-        <VerticalMenu />
+        <TheVerticalMenu />
         <b-col cols="10" id="main">
           <b-row>
-            <Header />
+            <TheHeader />
           </b-row>
           <b-row>
             <router-view />
@@ -17,12 +17,12 @@
 </template>
 
 <script>
-import Header from "@/components/Header.vue";
-import VerticalMenu from "@/components/VerticalMenu.vue";
+import TheHeader from "@/components/common/TheHeader.vue";
+import TheVerticalMenu from "@/components/common/TheVerticalMenu.vue";
 export default {
   components: {
-    Header,
-    VerticalMenu
+    TheHeader,
+    TheVerticalMenu
   }
 };
 </script>

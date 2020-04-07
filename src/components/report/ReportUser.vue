@@ -56,9 +56,9 @@
               <b-row class="history-list">
                 <b-col>
                   <b-list-group>
-                    <HistoryReportItem report_id="82" created_at="20/12/2019" />
-                    <HistoryReportItem report_id="64" created_at="14/11/2019" />
-                    <HistoryReportItem report_id="21" created_at="12/09/2019" />
+                    <ReportHistoryItem report_id="82" created_at="20/12/2019" />
+                    <ReportHistoryItem report_id="64" created_at="14/11/2019" />
+                    <ReportHistoryItem report_id="21" created_at="12/09/2019" />
                   </b-list-group>
                 </b-col>
               </b-row>
@@ -70,10 +70,10 @@
   </b-card>
 </template>
 <script>
-import HistoryReportItem from "@/components/HistoryReportItem.vue";
+import ReportHistoryItem from "@/components/report/ReportHistoryItem.vue";
 export default {
   components: {
-    HistoryReportItem
+    ReportHistoryItem
   },
   data() {
     return {

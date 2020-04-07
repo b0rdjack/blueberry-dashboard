@@ -10,12 +10,10 @@
       </b-col>
     </b-row>
     <b-row class="report-details">
-      <b-collapse :id="'history_details_' + report_id "  class="mt-2">
+      <b-collapse :id="'history_details_' + report_id " class="mt-2">
         <b-row>
           <b-col>
-            <p class="date">
-              Date: {{created_at}}
-            </p>
+            <p class="date">Date: {{created_at}}</p>
             <p class="description">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut magna ex.
               <br />Aliquam vel gravida sapien. Duis porttitor magna tempor, imperdiet ex at, molestie enim.

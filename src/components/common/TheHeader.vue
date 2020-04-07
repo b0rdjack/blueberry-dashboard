@@ -21,3 +21,6 @@
     </b-navbar>
   </b-col>
 </template>
+<script>
+export default {};
+</script>

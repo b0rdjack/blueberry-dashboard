@@ -2,9 +2,7 @@
   <b-col id="verticalmenu_block">
     <b-row class="title-section">
       <b-col class="text-center pt-4 pb-4">
-        <h1>
-          Blueberry
-        </h1>
+        <h1>Blueberry</h1>
       </b-col>
     </b-row>
     <!-- Main menu  -->
@@ -12,21 +10,21 @@
   </b-col>
 </template>
 <script>
-  import MenuItem from "@/components/MenuItem.vue";
+import MenuItem from "@/components/common/MenuItem.vue";
 export default {
-  components : {
+  components: {
     MenuItem
   },
   data() {
     return {
-      title: 'Main',
+      title: "Main",
       links: [
         {
           url: "/reports",
           title: "Signalement"
         }
       ]
-    }
+    };
   }
 };
 </script>

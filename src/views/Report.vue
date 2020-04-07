@@ -20,9 +20,9 @@
             </b-card>
           </b-col>
           <b-col>
-            <UserReport :user="report.by" mode="effectué" sub="Signale" user_id="05" />
+            <ReportUser :user="report.by" mode="effectué" sub="Signale" user_id="05" />
             <br />
-            <UserReport :user="report.accused" mode="reçu" sub="Signalé" user_id="10" />
+            <ReportUser :user="report.accused" mode="reçu" sub="Signalé" user_id="10" />
             <br />
           </b-col>
         </b-row>
@@ -32,10 +32,10 @@
 </template>
 <script>
 import { mapGetters } from "vuex";
-import UserReport from "@/components/UserReport.vue";
+import ReportUser from "@/components/report/ReportUser.vue";
 export default {
   components: {
-    UserReport
+    ReportUser
   },
   computed: {
     ...mapGetters(["getReportById"]),

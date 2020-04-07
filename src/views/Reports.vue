@@ -20,7 +20,7 @@
 </template>
 <script>
 import { mapState } from "vuex";
-import ReportsTab from "@/components/ReportsTab.vue";
+import ReportsTab from "@/components/reports/ReportsTab.vue";
 export default {
   components: {
     ReportsTab
