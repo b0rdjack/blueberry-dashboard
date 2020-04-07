@@ -30,6 +30,7 @@
 </template>
 <script>
 export default {
+  name: "ReportsTab",
   props: {
     fields: {
       type: Array,

@@ -34,6 +34,7 @@
 import { mapGetters } from "vuex";
 import ReportUser from "@/components/report/ReportUser.vue";
 export default {
+  name: "Report",
   components: {
     ReportUser
   },

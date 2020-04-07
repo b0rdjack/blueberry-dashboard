@@ -26,6 +26,7 @@
 </template>
 <script>
 export default {
+  name: "ReportHistoryItem",
   props: {
     report_id: "",
     created_at: ""

@@ -23,6 +23,7 @@
 </template>
 <script>
 export default {
+  name: "MenuItem",
   props: {
     title: "",
     links: {

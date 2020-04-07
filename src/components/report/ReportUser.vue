@@ -72,6 +72,7 @@
 <script>
 import ReportHistoryItem from "@/components/report/ReportHistoryItem.vue";
 export default {
+  name: "ReportUser",
   components: {
     ReportHistoryItem
   },

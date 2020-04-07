@@ -12,6 +12,7 @@
 <script>
 import MenuItem from "@/components/common/MenuItem.vue";
 export default {
+  name: "TheVerticalMenu",
   components: {
     MenuItem
   },

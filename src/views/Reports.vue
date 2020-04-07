@@ -22,6 +22,7 @@
 import { mapState } from "vuex";
 import ReportsTab from "@/components/reports/ReportsTab.vue";
 export default {
+  name: "Reports",
   components: {
     ReportsTab
   },
