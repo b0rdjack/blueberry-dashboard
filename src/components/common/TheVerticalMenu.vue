@@ -22,7 +22,8 @@ export default {
       links: [
         {
           url: "/reports",
-          title: "Signalement"
+          title: "Signalement",
+          icon: "exclamation-triangle"
         }
       ]
     };
