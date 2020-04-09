@@ -21,7 +21,12 @@ export default {
       title: "Main",
       links: [
         {
-          url: "/reports",
+          name: "home",
+          title: "Home",
+          icon: "chart-line"
+        },
+        {
+          name: "reports",
           title: "Signalement",
           icon: "exclamation-triangle"
         }
