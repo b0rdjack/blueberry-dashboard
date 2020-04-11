@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Reports from '../views/Reports.vue'
 import Report from '../views/Report.vue'
+import Users from '../views/Users.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -27,6 +28,11 @@ const routes = [
     name: 'report',
     component: Report
   },
+  {
+    path: "/users",
+    name: "users",
+    component: Users
+  }
 ]
 
 const router = new VueRouter({

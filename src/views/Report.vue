@@ -20,9 +20,9 @@
             </b-card>
           </b-col>
           <b-col>
-            <ReportUser :user="report.by" mode="effectué" sub="Signale" user_id="05" />
+            <ReportUser :user="report.by" mode="effectué" sub="Signale" :report_id="report.id"/>
             <br />
-            <ReportUser :user="report.accused" mode="reçu" sub="Signalé" user_id="10" />
+            <ReportUser :user="report.accused" mode="reçu" sub="Signalé" :report_id="report.id" />
             <br />
           </b-col>
         </b-row>

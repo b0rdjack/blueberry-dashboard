@@ -1,6 +1,12 @@
 <template>
   <b-col id="reportstab_block">
     <b-table :items="reports" :fields="fields" thead-class="thead-block">
+      <template v-slot:cell(accused)="item">
+        {{item.item.accused.firstname}} {{item.item.accused.lastname}}
+      </template>
+      <template v-slot:cell(by)="item">
+        {{item.item.by.firstname}} {{item.item.accused.lastname}}
+      </template>
       <template v-slot:cell(actions)="item">
         <b-row class="actions">
           <b-col class="approve">
@@ -56,11 +62,6 @@ export default {
         }
       ]
     }
-  },
-  data() {
-    return {
-      report: ""
-    };
   }
 };
 </script>

@@ -26,6 +26,11 @@ export default {
           icon: "chart-line"
         },
         {
+          name: "users",
+          title: "Utilisateurs",
+          icon: "users"
+        },
+        {
           name: "reports",
           title: "Signalement",
           icon: "exclamation-triangle"

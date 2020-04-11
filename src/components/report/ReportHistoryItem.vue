@@ -15,8 +15,7 @@
           <b-col>
             <p class="date">Date: {{created_at}}</p>
             <p class="description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut magna ex.
-              <br />Aliquam vel gravida sapien. Duis porttitor magna tempor, imperdiet ex at, molestie enim.
+              {{description}}
             </p>
           </b-col>
         </b-row>
@@ -29,7 +28,8 @@ export default {
   name: "ReportHistoryItem",
   props: {
     report_id: "",
-    created_at: ""
+    created_at: "",
+    description: ""
   },
   data() {
     return {

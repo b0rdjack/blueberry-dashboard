@@ -1,0 +1,26 @@
+#the_users_tab_block
+  .table
+    box-shadow: 0px 8px 8px $light_blue;
+    border-spacing: 0;
+    border-radius: 15px
+    thead
+      tr
+        th
+          background-color: $red
+          border: none
+          color: $light
+        th:first-child
+          border-top-left-radius: 15px
+        th:last-child
+          border-top-right-radius: 15px
+    tbody
+      tr
+        .column-ids
+          font-weight: bold
+      tr:hover
+        background-color: $gray
+      .b-table-row-selected
+        background-color: $light
+      tr:last-child
+        border-bottom-left-radius: 15px
+        border-bottom-right-radius: 15px

@@ -1,17 +1,33 @@
 export default [
   {
-    id: "92",
-    accused: "Eloise Vargas",
-    by: "Sophie Pratt",
+    id: 92,
+    accused: {
+      id: 1,
+      firstname: "Christien",
+      lastname: "Ducharme"
+    },
+    by: {
+      id: 14,
+      firstname: "Maureen",
+      lastname: "Bourassa"
+    },
     reason: "INSULTING",
     description: "Vestibulum semper sem id efficitur dapibus",
     date: "02/04/20",
     status: "PENDING",
   },
   {
-    id: "89",
-    accused: "Marion Bishop",
-    by: "Bobbie Reynolds",
+    id: 89,
+    accused: {
+      id: 1,
+      firstname: "Christien",
+      lastname: "Ducharme"
+    },
+    by: {
+      id: 26,
+      firstname: "Delmar",
+      lastname: "Giroux"
+    },
     reason: "NOT_CORRESPONDING",
     description:
       "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos",
@@ -19,18 +35,34 @@ export default [
     status: "ACCEPTED",
   },
   {
-    id: "65",
-    accused: "Dustin Hopkins",
-    by: "Wallace Barrett",
+    id: 65,
+    accused: {
+      id: 29,
+      firstname: "Calandre",
+      lastname: "Renaud"
+    },
+    by: {
+      id: 32,
+      firstname: "Vincent",
+      lastname: "Laberge"
+    },
     reason: "SPAM",
     description: "Nullam mattis accumsan lacinia",
     date: "14/12/19",
     status: "ACCEPTED",
   },
   {
-    id: "56",
-    accused: "Irvin Scott",
-    by: "Suzanne Webster",
+    id: 56,
+    accused: {
+      id: 41,
+      firstname: "David",
+      lastname: "Pouchard"
+    },
+    by: {
+      id: 46,
+      firstname: "Laure",
+      lastname: "Charette"
+    },
     reason: "INAPPROPRIATE",
     description:
       "Pellentesque pulvinar, nisl quis blandit pretium, purus velit lobortis mi, non varius augue est nec leo. Nulla facilisi",
