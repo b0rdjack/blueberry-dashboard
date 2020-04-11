@@ -1,11 +1,14 @@
 <template>
   <b-card class="user-report-block">
-    <b-card-title v-b-toggle="'more_details_' + user.id" @click="showDetails">
+    <b-card-title>
       <b-row>
         <b-col cols="11">
-          <span>Utilisateur #{{user.id}}</span>
+          <router-link
+            :to="{name: 'user', params: {id: user.id}}"
+            class="link-user"
+          >Utilisateur #{{user.id}}</router-link>
         </b-col>
-        <b-col>
+        <b-col v-b-toggle="'more_details_' + user.id" @click="showDetails">
           <font-awesome-icon v-if="state.show" :icon="['fas', 'chevron-up']" class="chevron-up" />
           <font-awesome-icon v-else :icon="['fas', 'chevron-down']" class="chevron-down" />
         </b-col>

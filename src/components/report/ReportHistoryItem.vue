@@ -1,10 +1,12 @@
 <template>
   <b-list-group-item>
-    <b-row v-b-toggle="'history_details_' + report_id " @click="showDetails" class="report-title">
+    <b-row class="report-title">
       <b-col cols="11">
-        <span>Signalement #{{report_id}}</span>
+        <router-link :to="{name: 'report', params: {id: report_id}}" class="link-report">
+          Signalement #{{report_id}}
+        </router-link>
       </b-col>
-      <b-col>
+      <b-col v-b-toggle="'history_details_' + report_id " @click="showDetails">
         <font-awesome-icon v-if="state.show" :icon="['fas', 'chevron-up']" class="chevron-up" />
         <font-awesome-icon v-else :icon="['fas', 'chevron-down']" class="chevron-down" />
       </b-col>
@@ -15,9 +17,7 @@
           <b-col>
             <p class="date">Date: {{created_at}}</p>
             <p class="status" v-if="status">{{status}}</p>
-            <p class="description">
-              {{description}}
-            </p>
+            <p class="description">{{description}}</p>
           </b-col>
         </b-row>
       </b-collapse>
