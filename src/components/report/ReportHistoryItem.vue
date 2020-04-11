@@ -14,6 +14,7 @@
         <b-row>
           <b-col>
             <p class="date">Date: {{created_at}}</p>
+            <p class="status" v-if="status">{{status}}</p>
             <p class="description">
               {{description}}
             </p>
@@ -29,7 +30,8 @@ export default {
   props: {
     report_id: "",
     created_at: "",
-    description: ""
+    description: "",
+    status: ""
   },
   data() {
     return {

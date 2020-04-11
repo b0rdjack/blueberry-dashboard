@@ -39,8 +39,9 @@ export default {
     }
   },
   methods: {
-    onRowSelected(items) {
-      console.log(items);
+    onRowSelected(item) {
+      let id = item[0].id
+      this.$router.push({ name: "user", params: { id } });
     }
   }
 };

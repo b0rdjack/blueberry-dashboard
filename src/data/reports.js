@@ -14,7 +14,7 @@ export default [
     reason: "INSULTING",
     description: "Vestibulum semper sem id efficitur dapibus",
     date: "02/04/20",
-    status: "PENDING",
+    status: "PENDING"
   },
   {
     id: 89,
@@ -32,7 +32,7 @@ export default [
     description:
       "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos",
     date: "18/02/20",
-    status: "ACCEPTED",
+    status: "ACCEPTED"
   },
   {
     id: 65,
@@ -49,7 +49,7 @@ export default [
     reason: "SPAM",
     description: "Nullam mattis accumsan lacinia",
     date: "14/12/19",
-    status: "ACCEPTED",
+    status: "ACCEPTED"
   },
   {
     id: 56,
@@ -67,6 +67,24 @@ export default [
     description:
       "Pellentesque pulvinar, nisl quis blandit pretium, purus velit lobortis mi, non varius augue est nec leo. Nulla facilisi",
     date: "25/07/19",
-    status: "ACCEPTED",
+    status: "ACCEPTED"
   },
+  {
+    id: 62,
+    accused: {
+      id: 66,
+      firstname: "Véronique",
+      lastname: "Thibault"
+    },
+    by: {
+      id: 41,
+      firstname: "David",
+      lastname: "Pouchard"
+    },
+    reason: "SPAM",
+    description:
+      "Nulla convallis magna convallis, suscipit sapien ut, pretium felis. Duis mattis tellus et neque dignissim, quis maximus quam interdum. Integer id vestibulum urna, at imperdiet neque.",
+    date: "18/08/19",
+    status: "PENDING"
+  }
 ];

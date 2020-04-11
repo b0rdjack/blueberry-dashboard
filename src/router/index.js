@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Reports from '../views/Reports.vue'
 import Report from '../views/Report.vue'
 import Users from '../views/Users.vue'
+import User from '../views/User.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -32,6 +33,11 @@ const routes = [
     path: "/users",
     name: "users",
     component: Users
+  },
+  {
+    path: '/users/:id',
+    name: 'user',
+    component: User
   }
 ]
 
