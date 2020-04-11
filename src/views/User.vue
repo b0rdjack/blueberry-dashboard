@@ -100,7 +100,7 @@
 </template>
 <script>
 import { mapGetters } from "vuex";
-import ReportHistoryItem from "@/components/report/ReportHistoryItem.vue";
+import ReportHistoryItem from "@/components/common/ReportHistoryItem.vue";
 export default {
   name: "User",
   components: {

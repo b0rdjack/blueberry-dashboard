@@ -4,7 +4,7 @@
       <template
         v-slot:cell(accused)="item"
       >{{item.item.accused.firstname}} {{item.item.accused.lastname}}</template>
-      <template v-slot:cell(by)="item">{{item.item.by.firstname}} {{item.item.accused.lastname}}</template>
+      <template v-slot:cell(by)="item">{{item.item.by.firstname}} {{item.item.by.lastname}}</template>
       <template v-slot:cell(actions)="item">
         <b-row class="actions">
           <b-col class="approve">
