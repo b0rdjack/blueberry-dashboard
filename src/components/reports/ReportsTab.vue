@@ -1,16 +1,14 @@
 <template>
   <b-col id="reportstab_block">
     <b-table :items="reports" :fields="fields" thead-class="thead-block">
-      <template v-slot:cell(accused)="item">
-        {{item.item.accused.firstname}} {{item.item.accused.lastname}}
-      </template>
-      <template v-slot:cell(by)="item">
-        {{item.item.by.firstname}} {{item.item.accused.lastname}}
-      </template>
+      <template
+        v-slot:cell(accused)="item"
+      >{{item.item.accused.firstname}} {{item.item.accused.lastname}}</template>
+      <template v-slot:cell(by)="item">{{item.item.by.firstname}} {{item.item.accused.lastname}}</template>
       <template v-slot:cell(actions)="item">
         <b-row class="actions">
           <b-col class="approve">
-            <b-button title="accept" size="sm">
+            <b-button title="accept" size="sm" @click="changeStatus(item.item.id, true)">
               <font-awesome-icon :icon="['fas', 'check-circle']" />
             </b-button>
           </b-col>
@@ -25,7 +23,7 @@
             </router-link>
           </b-col>
           <b-col class="delete">
-            <b-button title="refuse" size="sm">
+            <b-button title="refuse" size="sm" @click="changeStatus(item.item.id, false)">
               <font-awesome-icon :icon="['fas', 'trash-alt']" />
             </b-button>
           </b-col>
@@ -35,6 +33,7 @@
   </b-col>
 </template>
 <script>
+import { mapActions } from "vuex";
 export default {
   name: "ReportsTab",
   props: {
@@ -61,6 +60,16 @@ export default {
           actions: ""
         }
       ]
+    }
+  },
+  methods: {
+    ...mapActions(["changeReportStatus"]),
+    changeStatus(report_id, accept) {
+      const payload = {
+        id: report_id,
+        status: accept ? "ACCEPTED" : "REFUSED"
+      };
+      this.changeReportStatus(payload);
     }
   }
 };
