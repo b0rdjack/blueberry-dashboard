@@ -1,29 +1,56 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import Home from "../views/Home.vue";
+import Reports from "../views/Reports.vue";
+import Report from "../views/Report.vue";
+import Users from "../views/Users.vue";
+import User from "../views/User.vue";
+Vue.use(VueRouter);
 
-Vue.use(VueRouter)
+function convertIdToString(route) {
+  route.params.id = parseInt(route.params.id)
+}
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
+    path: "*",
+    redirect: {
+      name: "home"
+    }
+  },
+  {
+    path: "/home",
+    name: "home",
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: "/reports",
+    name: "reports",
+    component: Reports
+  },
+  {
+    path: "/reports/:id",
+    name: "report",
+    component: Report,
+    props: convertIdToString
+  },
+  {
+    path: "/users",
+    name: "users",
+    component: Users
+  },
+  {
+    path: "/users/:id",
+    name: "user",
+    component: User,
+    props: convertIdToString
   }
-]
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
   routes
-})
+});
 
-export default router
+export default router;

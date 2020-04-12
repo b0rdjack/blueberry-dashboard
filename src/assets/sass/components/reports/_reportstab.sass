@@ -1,0 +1,50 @@
+#reportstab_block
+  .table
+    box-shadow: 0px 8px 8px $light_blue;
+    border-spacing: 0;
+    border-radius: 15px
+    .thead-block
+      tr
+        th
+          background-color: $red
+          border: none
+          color: $light
+        th:first-child
+          border-top-left-radius: 15px
+        th:last-child
+          border-top-right-radius: 15px
+    tbody
+      tr
+        td
+          overflow: hidden;
+        .column-ids
+          font-weight: bold
+          .row
+            font-weight: normal
+        .column-actions
+          width: 10%
+          .actions
+            margin: 0
+            .col
+              padding: 0
+              .btn
+                border-radius: 50%;
+                background-color: $gray
+                border-color: $gray
+            .approve
+              .btn
+                background-color: $light_blue
+                &:hover
+                  background-color: $blue
+                  box-shadow: 0px 0px 2px 2px $light_blue;
+            .delete
+              .btn
+                background-color: $light_red;
+                &:hover
+                  background-color: $red
+                  box-shadow: 0px 0px 2px 2px $light_blue;
+            .details
+              .btn
+                &:hover
+                  background-color: $light_black
+                  box-shadow: 0px 0px 2px 2px $light_blue;
