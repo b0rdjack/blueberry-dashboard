@@ -54,6 +54,8 @@
           </b-card-body>
         </b-card>
       </b-col>
+    </b-row>
+    <b-row class="mt-3">
       <b-col>
         <b-card class="reports-block">
           <b-card-title>
@@ -118,7 +120,7 @@ export default {
       return this.getReportByAccusing(this.$route.params.id);
     },
     sexeClass() {
-      return this.user.sexe == "Homme" ? "male" : "female"
+      return this.user.sexe == "Homme" ? "male" : "female";
     }
   }
 };
