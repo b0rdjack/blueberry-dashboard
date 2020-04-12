@@ -4,10 +4,7 @@
       <b-row class="h-100">
         <TheVerticalMenu />
         <b-col cols="10" id="main">
-          <b-row>
-            <TheHeader />
-          </b-row>
-          <b-row>
+          <b-row class="mt-5">
             <router-view />
           </b-row>
         </b-col>
@@ -17,11 +14,9 @@
 </template>
 
 <script>
-import TheHeader from "@/components/common/TheHeader.vue";
 import TheVerticalMenu from "@/components/common/TheVerticalMenu.vue";
 export default {
   components: {
-    TheHeader,
     TheVerticalMenu
   }
 };
