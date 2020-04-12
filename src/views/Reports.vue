@@ -27,7 +27,20 @@ export default {
     ReportsTab
   },
   computed: {
-    ...mapState(["reports"])
+    ...mapState(["reports"]),
+    currentTime() {
+      let today = new Date();
+      let hours = today.getHours();
+      let minutes = today.getMinutes();
+      let secondes = today.getSeconds();
+      return (
+        ("0" + hours).slice(-2) +
+        ":" +
+        ("0" + minutes).slice(-2) +
+        ":" +
+        ("0" + secondes).slice(-2)
+      );
+    }
   },
   data() {
     return {
@@ -72,26 +85,8 @@ export default {
           label: "Actions",
           tdClass: "column-actions"
         }
-      ],
-      currentTime: ""
+      ]
     };
-  },
-  methods: {
-    getCurrentDate() {
-      let today = new Date();
-      let hours = today.getHours();
-      let minutes = today.getMinutes();
-      let secondes = today.getSeconds();
-      this.currentTime =
-        ("0" + hours).slice(-2) +
-        ":" +
-        ("0" + minutes).slice(-2) +
-        ":" +
-        ("0" + secondes).slice(-2);
-    }
-  },
-  mounted() {
-    this.getCurrentDate();
   }
 };
 </script>
