@@ -1,4 +1,12 @@
-# blueberry-dashboard
+# Blueberry-dashboard
+
+This a administrator dashboard to handle users reports.
+
+## Screenshots
+
+![Home](screenshots/blueberry_dashboard_1.PNG)
+![Users](screenshots/blueberry_dashboard_2.PNG)
+![Report details](screenshots/blueberry_dashboard_3.PNG)
 
 ## Project setup
 ```
